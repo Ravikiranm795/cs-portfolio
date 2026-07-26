@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="impactTitle">
+  <title id="impactTitle">Line-art graphic representing data insight and impact tracking</title>
+  <g fill="none" stroke="#2b6df6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- satellite dish top-left -->
+    <ellipse cx="48" cy="42" rx="20" ry="9" transform="rotate(-18 48 42)"/>
+    <line x1="48" y1="42" x2="70" y2="30"/>
+    <line x1="70" y1="30" x2="86" y2="18"/>
+    <line x1="70" y1="30" x2="86" y2="40"/>
+
+    <!-- connecting wavy path -->
+    <path d="M40,60 C 60,90 40,120 70,140 S 150,150 160,110 S 230,60 260,90"/>
+
+    <!-- magnifying glass -->
+    <circle cx="150" cy="118" r="26"/>
+    <line x1="168" y1="136" x2="184" y2="152"/>
+
+    <!-- small leaf / spark accents -->
+    <circle cx="70" cy="140" r="4" fill="#2b6df6"/>
+    <circle cx="260" cy="90" r="4" fill="#2b6df6"/>
+
+    <!-- zigzag arrow bracket right -->
+    <path d="M225,150 L250,175 L275,150"/>
+    <path d="M275,150 L300,125"/>
+    <polygon points="300,125 291,127 298,134" fill="#2b6df6" stroke="none"/>
+
+    <!-- small circle chevron -->
+    <circle cx="300" cy="150" r="12"/>
+    <polyline points="304,145 297,150 304,155"/>
+  </g>
+</svg>

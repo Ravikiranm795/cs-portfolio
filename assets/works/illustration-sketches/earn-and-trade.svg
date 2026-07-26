@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-labelledby="eatTitle">
+  <title id="eatTitle">Earn and Trade illustration — ascending stock chart</title>
+  <rect width="480" height="480" fill="#f2f2f2"/>
+  <text x="40" y="360" font-family="'Poppins', sans-serif" font-weight="700" font-size="34" fill="#0a0a0a">Earn and</text>
+  <text x="40" y="400" font-family="'Poppins', sans-serif" font-weight="700" font-size="34" fill="#0a0a0a">Trade</text>
+
+  <g stroke="#7fd9d4" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.55">
+    <polyline points="70,330 130,270 170,300 210,230 250,255 300,150 340,190 400,110"/>
+  </g>
+  <g stroke="#1f8fa8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <polyline points="70,330 130,270 170,300 210,230 250,255 300,150 340,190 400,110"/>
+  </g>
+  <g fill="#ffffff" stroke="#1f8fa8" stroke-width="3.5">
+    <circle cx="70" cy="330" r="6"/>
+    <circle cx="130" cy="270" r="6"/>
+    <circle cx="170" cy="300" r="6"/>
+    <circle cx="210" cy="230" r="6"/>
+    <circle cx="250" cy="255" r="6"/>
+    <circle cx="300" cy="150" r="6"/>
+    <circle cx="340" cy="190" r="6"/>
+    <circle cx="400" cy="110" r="6"/>
+  </g>
+
+  <line x1="220" y1="120" x2="220" y2="330" stroke="#1a1a1a" stroke-width="6"/>
+  <line x1="197" y1="150" x2="197" y2="310" stroke="#2b6df6" stroke-width="10"/>
+  <line x1="60" y1="270" x2="420" y2="270" stroke="#1a1a1a" stroke-width="2.5"/>
+
+  <g fill="#1f8fa8" font-family="'Poppins', sans-serif" font-weight="700" font-size="18">
+    <text x="55" y="345" transform="rotate(-14 55 345)">$</text>
+    <text x="418" y="230" transform="rotate(-14 418 230)">$</text>
+    <text x="418" y="290" transform="rotate(-14 418 290)">$</text>
+  </g>
+  <g stroke="#1f8fa8" stroke-width="2.5">
+    <line x1="400" y1="308" x2="440" y2="304"/>
+    <line x1="400" y1="330" x2="440" y2="326"/>
+  </g>
+</svg>

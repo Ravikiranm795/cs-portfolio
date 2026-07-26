@@ -1,0 +1,515 @@
+/* Happtag case-study — theme override.
+   Smart-tracker product palette: near-black, blue-purple, bright cyan, and
+   light grey — pulled from the HappTag brand guideline, laid over the
+   shared case-study.css skeleton. */
+
+:root {
+  --happtag-black: #000000;
+  --happtag-purple: #5f59a3;
+  --happtag-cyan: #1da5dc;
+  --happtag-grey: #f1f1f1;
+}
+
+body.happtag-page {
+  background: #fff;
+}
+
+.happtag-page .eyebrow {
+  color: var(--happtag-purple);
+  font-family: var(--font-mono-strong);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.happtag-page .cs-hero-title {
+  color: var(--happtag-black);
+}
+
+.happtag-page .cs-hero-media {
+  border: 1px solid #0000000f;
+}
+
+.happtag-page .cs-section-heading {
+  position: relative;
+  color: var(--happtag-black);
+}
+
+.happtag-page .cs-section-heading::before {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  height: 6px;
+  background: var(--happtag-purple);
+  margin-bottom: 14px;
+  border-radius: 2px;
+}
+
+.happtag-page .cs-chip {
+  border-color: var(--happtag-purple);
+  color: var(--happtag-purple);
+  font-weight: 600;
+}
+
+/* Stat pills — pastel backgrounds set inline per-stat, dark text always */
+
+.happtag-page .cs-stat {
+  color: #14141a;
+}
+
+/* Define — full-bleed purple problem-summary banner */
+
+.happtag-define {
+  background: var(--happtag-purple);
+  padding: 90px var(--gutter);
+  margin-top: 100px;
+  text-align: center;
+  color: #fff;
+}
+
+.happtag-define .eyebrow {
+  color: #ffffffb3;
+  justify-content: center;
+  display: flex;
+}
+
+.happtag-define p {
+  max-width: 880px;
+  margin: 16px auto 0;
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2.4vw, 26px);
+  line-height: 1.4;
+}
+
+.happtag-define p b {
+  font-weight: 700;
+}
+
+/* Pain-point "washi tape" cards */
+
+.happtag-tags {
+  padding: 100px var(--gutter) 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.happtag-tag-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.happtag-tape {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 10px 16px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #14141a;
+  transform: rotate(-4deg);
+  border-radius: 2px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+}
+
+.happtag-tag-card p {
+  color: var(--color-gray-text);
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Conclusion — outlined pill callout */
+
+.happtag-conclusion {
+  margin: 100px var(--gutter) 0;
+  border: 2px solid var(--happtag-purple);
+  border-radius: 100px;
+  padding: 48px 60px;
+  text-align: center;
+}
+
+.happtag-conclusion h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 26px;
+  margin: 0 0 16px;
+}
+
+.happtag-conclusion p {
+  color: var(--color-gray-text);
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Marketing punch-cards */
+
+.happtag-punch-cards {
+  padding: 100px var(--gutter) 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.happtag-punch-cards img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Colour + typeface swatches (branding section) */
+
+.happtag-swatches {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.happtag-swatch {
+  border-radius: 8px;
+  padding: 28px 24px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.happtag-swatch-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.happtag-swatch p {
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.happtag-swatch-hex {
+  font-family: var(--font-mono-strong);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.happtag-type-specimen {
+  background: var(--happtag-grey);
+  border-radius: 8px;
+  padding: 40px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.happtag-type-specimen .type-name {
+  font-family: var(--font-headline);
+  font-size: clamp(48px, 6vw, 90px);
+  color: #c9c9c9;
+  line-height: 1;
+  margin: 0;
+}
+
+.happtag-type-specimen .type-sample {
+  font-size: clamp(20px, 2vw, 28px);
+  color: #333;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+/* UI system — icon tile / toggle demo */
+
+.happtag-ui-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.happtag-toggle-demo {
+  background: var(--happtag-grey);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.happtag-toggle {
+  width: 52px;
+  height: 30px;
+  border-radius: 100px;
+  background: #d6d6d6;
+  position: relative;
+  display: inline-block;
+}
+
+.happtag-toggle::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.happtag-toggle.on {
+  background: var(--happtag-purple);
+}
+
+.happtag-toggle.on::after {
+  left: auto;
+  right: 3px;
+}
+
+.happtag-pill-demo {
+  border-radius: 100px;
+  padding: 12px 26px;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Feature explainer strip (Find by the beep, etc.) */
+
+.happtag-explainers {
+  padding: 60px var(--gutter) 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.happtag-explainers h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.happtag-explainers p {
+  color: var(--color-gray-text);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Small tag, Big Impact — feature grid */
+
+.happtag-feature-grid {
+  padding: 100px var(--gutter) 0;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 20px;
+}
+
+.happtag-feature-stack {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.happtag-feature-card {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  min-height: 220px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.happtag-feature-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.happtag-feature-card .feature-card-copy {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  color: #fff;
+}
+
+.happtag-feature-card .feature-card-copy h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.happtag-feature-card .feature-card-copy p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.happtag-feature-card.battery-card {
+  background: var(--happtag-purple);
+  padding: 28px;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.happtag-battery-icon {
+  width: 90px;
+  height: 44px;
+  border: 3px solid #29c76f;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  position: relative;
+}
+
+.happtag-battery-icon::after {
+  content: "";
+  position: absolute;
+  right: -9px;
+  top: 12px;
+  width: 6px;
+  height: 20px;
+  background: #29c76f;
+  border-radius: 0 3px 3px 0;
+}
+
+.happtag-battery-icon i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #29c76f;
+  border-radius: 3px;
+}
+
+.happtag-feature-hero {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.happtag-feature-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.happtag-feature-tiles {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.happtag-feature-tiles > div {
+  border-radius: 12px;
+  padding: 28px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.happtag-tile-range {
+  background: var(--happtag-grey);
+  color: #14141a;
+}
+
+.happtag-tile-range .tile-value {
+  font-family: var(--font-headline);
+  font-size: 56px;
+  line-height: 1;
+}
+
+.happtag-tile-range .tile-value span {
+  font-size: 22px;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.happtag-tile-connect {
+  background: var(--happtag-black);
+  color: #fff;
+}
+
+.happtag-tile-connect .tile-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.happtag-tile-connect .connect-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.happtag-tile-exploded {
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.happtag-tile-exploded img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Closer override */
+
+.happtag-page .cs-closer {
+  background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
+}
+
+.happtag-page .cs-closer-title span {
+  color: var(--happtag-purple);
+}
+
+@media (max-width: 900px) {
+  .happtag-tags {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .happtag-punch-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .happtag-swatches {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .happtag-type-specimen {
+    grid-template-columns: 1fr;
+  }
+
+  .happtag-explainers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .happtag-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .happtag-feature-tiles {
+    grid-template-columns: 1fr;
+  }
+
+  .happtag-conclusion {
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+    padding: 36px 28px;
+  }
+}

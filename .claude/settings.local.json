@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Figma__get_metadata",
+      "Bash(sips -g pixelWidth -g pixelHeight \"/Users/apple/Music/swash.png\")",
+      "Bash(xxd)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 *)",
+      "Bash(mkdir -p \"/private/tmp/claude-501/-Users-apple-Documents-my-works-CS-PROJECT/b4a7ced3-9fa6-406b-81cc-0b1b7c167903/scratchpad\")"
+    ]
+  }
+}

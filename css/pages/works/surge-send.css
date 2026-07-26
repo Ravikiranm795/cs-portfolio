@@ -1,0 +1,98 @@
+/* Surge Send case-study — theme override.
+   File-sharing product palette: signal blue, sky blue, ice, slate grey, laid over
+   the shared case-study.css skeleton. */
+
+:root {
+  --surge-blue: #1d48e0;
+  --surge-sky: #8dd4ff;
+  --surge-ice: #edeffc;
+  --surge-slate: #7e7f7f;
+}
+
+body.surge-send-page {
+  background: #fff;
+}
+
+.surge-send-page .eyebrow {
+  color: var(--surge-blue);
+  font-family: var(--font-mono-strong);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.surge-send-page .cs-hero-title {
+  color: #1c1c1c;
+}
+
+.surge-send-page .cs-hero-media {
+  border: 1px solid #1c1c1c14;
+}
+
+.surge-send-page .cs-section-heading {
+  position: relative;
+  color: #1c1c1c;
+}
+
+.surge-send-page .cs-section-heading::before {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  height: 6px;
+  background: var(--surge-blue);
+  margin-bottom: 14px;
+  border-radius: 2px;
+}
+
+.surge-send-page .cs-chip {
+  border-color: var(--surge-blue);
+  color: #1c1c1c;
+  font-weight: 600;
+}
+
+/* Typography & Colours section */
+
+.surge-send-type-colors {
+  padding: 0 var(--gutter);
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.surge-send-type-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  border: 1px solid var(--color-border);
+}
+
+.surge-send-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.surge-send-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Closer */
+
+.surge-send-page .cs-closer {
+  background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
+}
+
+.surge-send-page .cs-closer-title span {
+  color: var(--surge-blue);
+}
+
+@media (max-width: 900px) {
+  .surge-send-type-colors {
+    grid-template-columns: 1fr;
+  }
+}

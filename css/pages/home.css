@@ -1,0 +1,270 @@
+/* Home Landing page — figma node 50:151 */
+
+.hero-logo {
+  width: 100%;
+  max-width: 1339px;
+  margin: 60px auto 0;
+  padding: 0 var(--gutter);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 120px var(--gutter) 0;
+}
+
+.hero-intro {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.15;
+  margin: 0 0 32px;
+  max-width: 670px;
+}
+
+.hero-intro strong {
+  font-weight: 700;
+}
+
+.social-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-phone {
+  position: relative;
+}
+
+.hero-phone img {
+  width: 100%;
+  max-width: 706px;
+  margin-left: auto;
+}
+
+.hero-phone-caption {
+  margin-top: 20px;
+}
+
+.hero-phone-caption .tag {
+  display: block;
+  font-weight: 600;
+}
+
+.hero-phone-caption .desc {
+  color: var(--color-gray-text);
+}
+
+.featured-work {
+  padding: 100px var(--gutter) 0;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+}
+
+.section-title {
+  font-family: var(--font-headline);
+  font-weight: 400;
+  font-size: clamp(48px, 9vw, 130px);
+  line-height: 0.85;
+  margin: 0 0 60px;
+  text-transform: capitalize;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 30px;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.work-card .work-media {
+  aspect-ratio: 1 / 1;
+  background: #f2f2f2;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-card .work-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-card.work-wide {
+  grid-column: 1 / -1;
+}
+
+.work-card.work-wide .work-media {
+  aspect-ratio: 2680 / 1624;
+}
+
+.work-card .work-title {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.work-card .work-desc {
+  color: var(--color-gray-text);
+}
+
+.work-strip {
+  margin-top: 40px;
+  overflow-x: auto;
+}
+
+.work-strip-track {
+  display: flex;
+  gap: 16px;
+}
+
+.work-strip-tile {
+  position: relative;
+  flex: 0 0 140px;
+  aspect-ratio: 3 / 4;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  background: #1c1c1c;
+}
+
+.work-strip-tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: 0;
+}
+
+.work-strip-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 60%);
+  z-index: 1;
+}
+
+.work-strip-tile span {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Light-background tiles (e.g. logo marks on white) need a light scrim + dark caption for contrast */
+.work-strip-tile.light-tile {
+  background: #f2f2f2;
+}
+
+.work-strip-tile.light-tile img {
+  object-fit: contain;
+  padding: 20px;
+}
+
+.work-strip-tile.light-tile::after {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 60%);
+}
+
+.work-strip-tile.light-tile span {
+  color: #1c1c1c;
+  text-shadow: none;
+}
+
+.view-all {
+  max-width: 532px;
+  margin: 60px 0 0;
+}
+
+.testimonials {
+  padding: 100px var(--gutter) 0;
+}
+
+.testimonials .eyebrow {
+  margin-bottom: 40px;
+}
+
+.trusted-by-logos {
+  max-width: 541px;
+  margin-bottom: 24px;
+}
+
+.trusted-by-note {
+  max-width: 360px;
+  margin-bottom: 60px;
+}
+
+.testimonial {
+  display: grid;
+  grid-template-columns: 165px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.testimonial-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.testimonial-quote {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: clamp(28px, 4vw, 55px);
+  line-height: 1.15;
+  margin: 0 0 30px;
+}
+
+.testimonial-body {
+  max-width: 602px;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.testimonial-author img {
+  width: 72px;
+  height: 88px;
+  border-radius: 36px;
+  object-fit: cover;
+}
+
+.testimonial-author strong {
+  display: block;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 60px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,126 @@
+/* Let's Connect / Contact page */
+
+.connect-hero {
+  padding: 100px var(--gutter) 0;
+  text-align: center;
+}
+
+.connect-hero-title {
+  font-family: var(--font-headline);
+  font-weight: 400;
+  font-size: clamp(48px, 10vw, 150px);
+  line-height: 0.85;
+  margin: 0 0 40px;
+}
+
+.connect-intro {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(18px, 2.4vw, 26px);
+  line-height: 1.4;
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+.email-link {
+  color: #c0392b;
+  text-decoration: underline;
+}
+
+.connect-hero .contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono-strong);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.connect-hero .contact-item img {
+  width: 24px;
+  height: auto;
+}
+
+.social-section {
+  padding: 100px var(--gutter) 0;
+  text-align: center;
+}
+
+.social-copy {
+  max-width: 560px;
+  margin: 0 auto 40px;
+  color: var(--color-gray-text);
+}
+
+.social-tiles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.social-tile {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.deck-cta {
+  background: #0a0a0a;
+  color: #fff;
+  margin-top: 100px;
+  padding: 100px 0;
+}
+
+.deck-cta-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.deck-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.deck-title {
+  font-family: var(--font-headline);
+  font-weight: 400;
+  font-size: clamp(32px, 4.5vw, 56px);
+  line-height: 0.95;
+  margin: 0 0 24px;
+}
+
+.deck-copy p {
+  color: #ccc;
+  max-width: 480px;
+  margin: 0 0 30px;
+}
+
+.outline-btn-white {
+  background: #fff;
+  color: #0a0a0a;
+  border-color: #fff;
+  max-width: 240px;
+}
+
+.outline-btn-white:hover {
+  background: #eee;
+}
+
+@media (max-width: 900px) {
+  .deck-cta-inner {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,246 @@
+/* Billd case-study theme override — purple SaaS palette.
+   Loaded after base.css + case-study.css on pages/works/billd.html only. */
+
+:root {
+  --billd-purple: #3a1050;
+  --billd-purple-deep: #260a36;
+  --billd-orange: #e5a35b;
+  --billd-green: #8bc63e;
+  --billd-off-white: #f8f6fb;
+}
+
+/* Hero + section heading accent */
+
+.billd-page .cs-hero-title {
+  color: var(--billd-purple);
+}
+
+.billd-page .cs-section-heading {
+  color: var(--billd-purple);
+}
+
+.billd-page .cs-hero-media {
+  background: var(--billd-purple);
+}
+
+/* Chips reused inside Business Type band get a light-on-dark treatment,
+   see .cs-business-type .cs-chip override below */
+
+/* Business Type diagonal band */
+
+.billd-page .cs-business-type {
+  position: relative;
+  margin-top: 100px;
+  padding: 140px 0 160px;
+  background: var(--billd-purple);
+  color: #fff;
+  overflow: hidden;
+  clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+}
+
+.billd-page .cs-business-type-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.billd-page .cs-business-type .cs-section-heading {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.billd-page .cs-business-type p {
+  color: #e6dcef;
+  max-width: 640px;
+  margin: 0 0 40px;
+}
+
+.billd-page .business-type-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.billd-page .cs-business-type .cs-chip {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+/* Pricing cards */
+
+.billd-page .pricing-cards {
+  padding: 60px var(--gutter) 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.billd-page .pricing-card {
+  background: var(--billd-off-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.billd-page .pricing-card.featured {
+  background: #fff;
+  border: 1px solid var(--billd-purple);
+  box-shadow: 0 20px 40px rgba(58, 16, 80, 0.12);
+}
+
+.billd-page .pricing-card-icon {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.billd-page .pricing-card-name {
+  font-family: var(--font-headline);
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  color: var(--billd-purple);
+}
+
+.billd-page .pricing-card-price {
+  font-family: var(--font-mono-strong);
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0 0 24px;
+  color: var(--color-black);
+}
+
+.billd-page .pricing-card-price span {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-gray-text);
+}
+
+.billd-page .pricing-card-features {
+  flex: 1;
+  margin: 0 0 30px;
+}
+
+.billd-page .pricing-card-features li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 12px;
+  color: var(--color-gray-text);
+  font-size: 14px;
+}
+
+.billd-page .pricing-card-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--billd-green);
+}
+
+.billd-page .pricing-card-btn {
+  background: var(--billd-orange);
+  border-color: var(--billd-orange);
+  color: var(--billd-purple-deep);
+  font-weight: 700;
+  width: 100%;
+  min-width: 0;
+}
+
+.billd-page .pricing-card-btn:hover {
+  background: #d8934a;
+}
+
+/* Schedule Demo form */
+
+.billd-page .demo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 30px;
+  max-width: 460px;
+}
+
+.billd-page .demo-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.billd-page .demo-form input {
+  font-family: var(--font-body);
+  font-size: 15px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--color-black);
+}
+
+.billd-page .demo-form input:focus {
+  outline: none;
+  border-color: var(--billd-purple);
+}
+
+.billd-page .demo-form input::placeholder {
+  color: #b0b0b0;
+}
+
+.billd-page .demo-form button[type="submit"] {
+  margin-top: 8px;
+  align-self: flex-start;
+  background: var(--billd-orange);
+  border: none;
+  border-radius: 4px;
+  padding: 16px 40px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--billd-purple-deep);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.billd-page .demo-form button[type="submit"]:hover {
+  background: #d8934a;
+}
+
+/* Dark BILLD sub-footer band */
+
+.billd-page .billd-subfooter {
+  margin-top: 120px;
+  background: var(--billd-purple-deep);
+  padding: 70px 0;
+}
+
+.billd-page .billd-subfooter-logo {
+  font-family: var(--font-headline);
+  font-weight: 400;
+  font-size: clamp(36px, 6vw, 64px);
+  color: #fff;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+
+.billd-page .billd-subfooter-tagline {
+  color: #c9b9d8;
+  font-size: 15px;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .billd-page .pricing-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .billd-page .cs-business-type {
+    padding: 90px 0 100px;
+  }
+}

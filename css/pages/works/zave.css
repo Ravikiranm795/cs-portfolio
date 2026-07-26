@@ -1,0 +1,129 @@
+/* Zave case-study — theme override.
+   Fintech branding palette: teal, golden yellow, white, laid over the
+   shared case-study.css skeleton. */
+
+:root {
+  --zave-teal: #197383;
+  --zave-gold: #f0cb56;
+  --zave-black: #0a0a0a;
+}
+
+body.zave-page {
+  background: #fff;
+}
+
+.zave-page .eyebrow {
+  color: var(--zave-teal);
+  font-family: var(--font-mono-strong);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.zave-page .cs-hero-title {
+  color: var(--zave-black);
+}
+
+.zave-page .cs-hero-media {
+  border: 1px solid #0a0a0a14;
+}
+
+.zave-page .cs-section-heading {
+  position: relative;
+  color: var(--zave-black);
+}
+
+.zave-page .cs-section-heading::before {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  height: 6px;
+  background: var(--zave-teal);
+  margin-bottom: 14px;
+  border-radius: 2px;
+}
+
+.zave-page .cs-chip {
+  border-color: var(--zave-teal);
+  color: var(--zave-teal);
+  font-weight: 600;
+}
+
+/* Color palette swatches */
+
+.zave-swatches {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.zave-swatch {
+  border-radius: 8px;
+  padding: 32px 28px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.zave-swatch-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.zave-swatch p {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.zave-swatch-hex {
+  font-family: var(--font-mono-strong);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+/* Dark full-bleed band for the OOH/subway section */
+
+.zave-page .cs-section-full.dark-band {
+  background: var(--zave-black);
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 100px;
+}
+
+.zave-page .cs-section-full.dark-band .cs-section-heading {
+  color: #fff;
+}
+
+.zave-page .cs-section-full.dark-band .cs-section-heading::before {
+  background: var(--zave-gold);
+}
+
+.zave-page .cs-section-full.dark-band p {
+  color: #bdbdbd;
+}
+
+/* Closer */
+
+.zave-page .cs-closer {
+  background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
+}
+
+.zave-page .cs-closer-title span {
+  color: var(--zave-teal);
+}
+
+@media (max-width: 900px) {
+  .zave-swatches {
+    grid-template-columns: 1fr;
+  }
+
+  .zave-page .cs-section-full.dark-band {
+    margin-left: calc(var(--gutter) * -1);
+    margin-right: calc(var(--gutter) * -1);
+  }
+}

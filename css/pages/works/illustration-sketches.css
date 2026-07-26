@@ -1,0 +1,163 @@
+/* Illustration & Sketches case-study — theme override.
+   Adds the copy/heading/callout elements the gallery grid needs beyond the
+   plain image cells handled by the shared cs-gallery skeleton in case-study.css. */
+
+:root {
+  --illu-red: #d21b1c;
+  --illu-teal: #158084;
+  --illu-panel-bg: #f2f2f2;
+}
+
+body.illustration-sketches-page {
+  background: #fff;
+}
+
+/* Hero lead-in ("I believe") */
+
+.illustration-sketches-page .cs-hero-intro .cs-lead {
+  display: block;
+  font-weight: 700;
+  font-size: 1.3em;
+  color: var(--color-black);
+  margin-bottom: 2px;
+}
+
+/* Plain text cells that sit inside the gallery grid alongside images
+   (captions, sub-headings) — no gray card background like image cells. */
+
+.illustration-sketches-page .illustration-caption {
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.illustration-sketches-page .illustration-caption p {
+  color: var(--color-gray-text);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.illustration-sketches-page .gallery-subheading {
+  grid-column: 1 / -1;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0;
+}
+
+/* "Make A MOVY Happen!" display heading */
+
+.illustration-sketches-page .illustration-movy-heading {
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.illustration-sketches-page .illustration-movy-heading h3 {
+  font-family: var(--font-headline);
+  font-weight: 400;
+  color: var(--illu-red);
+  font-size: clamp(30px, 4.5vw, 54px);
+  text-transform: uppercase;
+  line-height: 0.95;
+  margin: 0;
+}
+
+/* Movie-poster illustration with the floating "EXPERIENCE" callout card */
+
+.illustration-sketches-page .illustration-poster-wrap {
+  position: relative;
+  background: #0a0a0a;
+}
+
+.illustration-sketches-page .illustration-experience-card {
+  position: absolute;
+  right: 24px;
+  bottom: -36px;
+  width: 48%;
+  max-width: 320px;
+  background: #0a0a0a;
+  border: 6px solid #fff;
+  border-radius: 26px;
+  color: #fff;
+  padding: 20px 22px;
+  text-align: center;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+}
+
+.illustration-sketches-page .illustration-experience-card h3 {
+  font-family: var(--font-mono-strong);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 14px;
+  margin: 0 0 8px;
+}
+
+.illustration-sketches-page .illustration-experience-card p {
+  font-size: 11px;
+  line-height: 1.45;
+  color: #d8d8d8;
+  margin: 0;
+}
+
+/* Billd closing impact panel */
+
+.illustration-sketches-page .illustration-impact-panel {
+  grid-column: 1 / -1;
+  background: var(--illu-panel-bg);
+  border-radius: 20px;
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.illustration-sketches-page .illustration-impact-copy {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--illu-teal);
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.illustration-sketches-page .illustration-impact-graphic {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.illustration-sketches-page .illustration-impact-graphic img {
+  width: 130px;
+  height: auto;
+}
+
+.illustration-sketches-page .illustration-impact-label {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-black);
+  line-height: 1.3;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .illustration-sketches-page .illustration-experience-card {
+    position: static;
+    width: 100%;
+    max-width: none;
+    margin-top: 14px;
+    border-radius: 16px;
+  }
+
+  .illustration-sketches-page .illustration-impact-panel {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .illustration-sketches-page .illustration-impact-label {
+    text-align: center;
+  }
+}

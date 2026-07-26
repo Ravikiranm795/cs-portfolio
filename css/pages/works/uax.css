@@ -1,0 +1,590 @@
+/* UAX Digital Coin case-study — theme override.
+   Dark Web3/crypto palette: deep navy, purple, magenta, laid over the
+   shared case-study.css skeleton. */
+
+:root {
+  --uax-navy: #14102a;
+  --uax-navy-deep: #0d0a1f;
+  --uax-purple: #7c3aed;
+  --uax-magenta: #c026d3;
+  --uax-pink: #ec4899;
+}
+
+body.uax-page {
+  background: #fff;
+}
+
+.uax-page .eyebrow {
+  color: var(--uax-magenta);
+  font-family: var(--font-mono-strong);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.uax-page .cs-hero-title {
+  color: var(--uax-navy-deep);
+}
+
+.uax-page .cs-hero-media {
+  background: var(--uax-navy-deep);
+  border: 1px solid #0000000f;
+}
+
+.uax-page .cs-section-heading {
+  position: relative;
+  color: var(--uax-navy-deep);
+}
+
+.uax-page .cs-section-heading::before {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  height: 6px;
+  background: linear-gradient(90deg, var(--uax-purple), var(--uax-magenta));
+  margin-bottom: 14px;
+  border-radius: 2px;
+}
+
+.uax-page .cs-chip {
+  border-color: var(--uax-magenta);
+  color: var(--uax-magenta);
+  font-weight: 600;
+}
+
+.uax-accent {
+  color: var(--uax-magenta);
+}
+
+/* Stat pills + Game Changer panel */
+
+.uax-page .uax-stats-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.uax-game-changer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 40px;
+  background: linear-gradient(135deg, var(--uax-purple), var(--uax-magenta));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 260px;
+}
+
+.uax-game-changer h2 {
+  font-family: var(--font-headline);
+  font-weight: 400;
+  font-size: clamp(24px, 2.6vw, 32px);
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin: 0 0 16px;
+  max-width: 220px;
+}
+
+.uax-game-changer p {
+  color: #f1e6fb;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 240px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.uax-game-changer-graphic {
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  width: 160px;
+  height: 160px;
+  background-image:
+    linear-gradient(135deg, #ffffff33, #ffffff00 60%),
+    repeating-radial-gradient(circle at 50% 50%, #ffffff3d 0, #ffffff3d 1px, transparent 1px, transparent 22px),
+    conic-gradient(from 210deg, #ffffff00 0deg, #ffffff2b 40deg, #ffffff00 90deg);
+  border-radius: 50%;
+  border: 1px solid #ffffff3d;
+}
+
+.uax-game-changer-graphic::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  width: 0;
+  height: 0;
+  border-left: 34px solid transparent;
+  border-right: 34px solid transparent;
+  border-bottom: 58px solid #ffffffe6;
+  filter: drop-shadow(0 0 10px #ffffffaa);
+}
+
+.uax-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.uax-page .cs-stat {
+  background: var(--uax-navy-deep);
+  color: #fff;
+}
+
+.uax-page .cs-stat-value {
+  background: linear-gradient(90deg, var(--uax-purple), var(--uax-magenta));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.uax-page .cs-stat-label {
+  color: #bfb8d6;
+}
+
+/* Ecosystem card row */
+
+.uax-card-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.uax-card {
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--uax-navy-deep);
+}
+
+.uax-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.uax-card-body {
+  padding: 24px;
+}
+
+.uax-card-body h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: #fff;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.uax-card-body p {
+  color: #bfb8d6;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Core Offerings grid */
+
+.uax-offering-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.uax-offering {
+  border: 1px solid #e6e0ee;
+  border-radius: 8px;
+  padding: 28px 24px;
+}
+
+.uax-offering h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 0 10px;
+  color: var(--uax-navy-deep);
+}
+
+.uax-offering p {
+  color: var(--color-gray-text);
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+
+.uax-explore {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--uax-magenta);
+}
+
+/* What's New list */
+
+.uax-news-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 60px;
+}
+
+.uax-news-item h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: #fff;
+  margin: 0 0 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.uax-news-item h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--uax-magenta);
+}
+
+.uax-news-item p {
+  color: #bfb8d6;
+  font-size: 14px;
+  margin: 0 0 0 20px;
+}
+
+/* Tokenomics */
+
+.uax-tokenomics {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.uax-tokenomics-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.uax-token-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.uax-token-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.uax-token-label {
+  font-size: 14px;
+  color: var(--uax-navy-deep);
+}
+
+.uax-token-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  margin-left: auto;
+  color: var(--uax-navy-deep);
+}
+
+.uax-donut {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  justify-self: center;
+}
+
+.uax-donut-chart {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    #c026d3 0deg 120deg,
+    #7c3aed 120deg 205.7deg,
+    #9333ea 205.7deg 291.4deg,
+    #ec4899 291.4deg 325.7deg,
+    #4f46e5 325.7deg 342.8deg,
+    #a21caf 342.8deg 360deg
+  );
+}
+
+.uax-donut-center {
+  position: absolute;
+  inset: 22px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  box-shadow: 0 0 0 1px #eee;
+}
+
+.uax-donut-center span {
+  font-size: 12px;
+  color: var(--color-gray-text);
+}
+
+.uax-donut-center strong {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--uax-navy-deep);
+}
+
+/* Join Community + Newsletter */
+
+.uax-community {
+  padding-top: 100px;
+}
+
+.uax-community-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+}
+
+.uax-community-card {
+  background: linear-gradient(135deg, var(--uax-magenta), #7e1a8f);
+  border-radius: 8px;
+  padding: 40px;
+  color: #fff;
+}
+
+.uax-community-card h2 {
+  font-family: var(--font-headline);
+  font-weight: 400;
+  font-size: clamp(26px, 3vw, 34px);
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+
+.uax-community-card p {
+  color: #f6d9fa;
+  margin: 0 0 24px;
+  max-width: 480px;
+}
+
+.uax-community-btn {
+  background: #fff;
+  color: var(--uax-magenta);
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+}
+
+.uax-newsletter {
+  background: var(--uax-navy-deep);
+  border-radius: 8px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.uax-newsletter-eyebrow {
+  color: #bfb8d6;
+  font-size: 14px;
+  margin: 0 0 4px;
+}
+
+.uax-newsletter h3 {
+  font-family: var(--font-headline);
+  font-weight: 400;
+  font-size: clamp(22px, 2.6vw, 28px);
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 24px;
+}
+
+.uax-newsletter-form {
+  display: flex;
+  gap: 12px;
+}
+
+.uax-newsletter-form input {
+  flex: 1;
+  border: 0;
+  border-radius: 100px;
+  padding: 14px 20px;
+  font-family: var(--font-display);
+  font-size: 14px;
+}
+
+.uax-newsletter-form button {
+  background: var(--uax-magenta);
+  color: #fff;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+}
+
+/* NFT marketplace grid: large feature tile + 5-up thumb strip */
+
+.uax-page .cs-section-full.dark-band {
+  background: var(--uax-navy-deep);
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 100px;
+}
+
+.uax-page .cs-section-full.dark-band .cs-section-heading {
+  color: #fff;
+}
+
+.uax-page .cs-section-full.dark-band .cs-section-heading::before {
+  background: linear-gradient(90deg, var(--uax-magenta), var(--uax-pink));
+}
+
+.uax-page .cs-section-full.dark-band p {
+  color: #bfb8d6;
+}
+
+.uax-nft-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.uax-nft-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 24px;
+}
+
+.uax-nft-info h3 {
+  font-family: var(--font-headline);
+  font-weight: 400;
+  font-size: clamp(24px, 2.8vw, 32px);
+  text-transform: uppercase;
+  color: var(--uax-navy-deep);
+  margin: 0 0 12px;
+}
+
+.uax-nft-info > p:first-of-type {
+  color: var(--color-gray-text);
+  margin: 0 0 28px;
+}
+
+.uax-nft-info h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--uax-navy-deep);
+  margin: 0 0 10px;
+}
+
+.uax-nft-info p {
+  color: var(--color-gray-text);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.uax-nft-feature {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.uax-nft-feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.uax-nft-thumbs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.uax-nft-thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Closer */
+
+.uax-page .cs-closer {
+  background: linear-gradient(180deg, #fff 0%, #f7f4fb 100%);
+}
+
+.uax-page .cs-closer-title span {
+  background: linear-gradient(90deg, var(--uax-purple), var(--uax-magenta));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 900px) {
+  .uax-card-row {
+    grid-template-columns: 1fr;
+  }
+
+  .uax-nft-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .uax-nft-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .uax-stats-section {
+    grid-template-columns: 1fr;
+  }
+
+  .uax-offering-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .uax-news-list {
+    grid-template-columns: 1fr;
+  }
+
+  .uax-tokenomics {
+    grid-template-columns: 1fr;
+  }
+
+  .uax-donut {
+    order: -1;
+  }
+
+  .uax-community-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .uax-newsletter-form {
+    flex-direction: column;
+  }
+
+  .uax-page .cs-section-full.dark-band {
+    margin-left: calc(var(--gutter) * -1);
+    margin-right: calc(var(--gutter) * -1);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .uax-offering-grid {
+    grid-template-columns: 1fr;
+  }
+}

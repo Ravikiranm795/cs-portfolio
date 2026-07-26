@@ -1,0 +1,92 @@
+/* Arisinfra case-study — theme override.
+   Industrial construction-tech palette: orange/amber accent, charcoal-black,
+   steel blue, laid over the shared case-study.css skeleton. */
+
+:root {
+  --aris-orange: #f2a022;
+  --aris-orange-deep: #d9720f;
+  --aris-black: #1c1c1c;
+  --aris-blue: #2f7fc1;
+}
+
+body.arisinfra-page {
+  background: #fff;
+}
+
+.arisinfra-page .eyebrow {
+  color: var(--aris-orange-deep);
+  font-family: var(--font-mono-strong);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.arisinfra-page .cs-hero-title {
+  color: var(--aris-black);
+}
+
+.arisinfra-page .cs-hero-title span {
+  color: var(--aris-orange);
+}
+
+.arisinfra-page .cs-hero-media {
+  border: 1px solid #1c1c1c14;
+}
+
+/* Section headings pick up the brand mark's angular orange */
+
+.arisinfra-page .cs-section-heading {
+  position: relative;
+  color: var(--aris-black);
+}
+
+.arisinfra-page .cs-section-heading::before {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  height: 6px;
+  background: var(--aris-orange);
+  margin-bottom: 14px;
+  border-radius: 2px;
+}
+
+.arisinfra-page .cs-section-copy p {
+  color: var(--color-gray-text);
+}
+
+/* Dark full-bleed band for the standee/rollup section */
+
+.arisinfra-page .cs-section-full.dark-band {
+  background: var(--aris-black);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 100px;
+}
+
+.arisinfra-page .cs-section-full.dark-band .cs-section-heading {
+  color: #fff;
+}
+
+.arisinfra-page .cs-section-full.dark-band p {
+  color: #bdbdbd;
+}
+
+.arisinfra-page .cs-section-full.dark-band .cs-section-media-grid img {
+  border-radius: 8px;
+}
+
+/* Closer */
+
+.arisinfra-page .cs-closer {
+  background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
+}
+
+.arisinfra-page .cs-closer-title span {
+  color: var(--aris-orange);
+}
+
+@media (max-width: 900px) {
+  .arisinfra-page .cs-section-full.dark-band {
+    margin-left: calc(var(--gutter) * -1);
+    margin-right: calc(var(--gutter) * -1);
+  }
+}

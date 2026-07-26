@@ -1,0 +1,45 @@
+/* Prep My Skills case-study — theme override.
+   Playful kids-learning-app palette: orange accent, sky blue, soft green hill,
+   laid over the shared case-study.css skeleton. */
+
+:root {
+  --pms-orange: #ef8f35;
+  --pms-blue: #3395ff;
+  --pms-green: #afdbc4;
+}
+
+body.prep-my-skills-page {
+  background: #fff;
+}
+
+.prep-my-skills-page .cs-hero-title {
+  color: var(--pms-orange);
+}
+
+/* Hero illustration band — kids + giraffe on the green hill, followed by the
+   iPad/stylus login-screen mockup, per the Figma export. */
+
+.cs-hero-illustration {
+  padding: 0 var(--gutter);
+  margin-top: 40px;
+}
+
+.cs-hero-illustration img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.prep-my-skills-page .cs-section-heading {
+  color: #2b2b2b;
+}
+
+/* Closer — stack the book + two opened-workbook photo compositions with
+   breathing room between them, per the design's order. */
+
+.prep-my-skills-page .cs-closer-media {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
