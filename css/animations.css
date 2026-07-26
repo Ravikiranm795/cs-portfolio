@@ -1,0 +1,56 @@
+/* Premium animation layer — additive only.
+   Loaded last on every page so its two position:relative rules below win
+   over per-page CSS without altering any existing layout. */
+
+/* 1. Lenis (mirrors lenis@1.1.14 dist/lenis.css) */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+/* 2. Page transition overlay */
+.page-fade {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.42s ease;
+}
+
+html.anim-js .page-fade { opacity: 1; }
+html.anim-js.page-ready .page-fade { opacity: 0; }
+html.anim-js.page-leaving .page-fade { opacity: 1; transition-duration: 0.28s; }
+
+/* 3. WebGL hero accent layer — abspos removes it from grid/flex flow,
+   z-index:-1 keeps it behind all existing hero content. */
+.hero,
+.cs-hero {
+  position: relative;
+}
+
+.hero-webgl {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+}
+
+.hero-webgl canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* 4. Scroll-reveal targets: engine sets/clears inline styles via GSAP only —
+   no CSS initial-hidden state here, so JS-off/failure always shows content. */
+
+/* 5. Reduced motion: no overlay, no canvas, everything stays visible */
+@media (prefers-reduced-motion: reduce) {
+  .hero-webgl { display: none; }
+  .page-fade { display: none; }
+}
